@@ -17,7 +17,7 @@
         "filament/tables": "^5.8.3",
         "intervention/image": "4.3.2",
         "laravel/framework": "^12.71.0",
-        "laravel/sanctum": "4.3.3",
+        "laravel/sanctum": "4.5.0",
         "laravel/tinker": "^2.10.1",
         "maatwebsite/excel": "4.0.3",
         "pxlrbt/filament-excel": "4.1.0",

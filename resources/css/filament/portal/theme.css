@@ -1,0 +1,83 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+@source '../../../../app/Filament/**/*.php';
+@source '../../../views/filament/**/*.blade.php';
+@source '../../../views/portal/**/*.blade.php';
+
+/* This theme is loaded only by the portal panel, including Livewire pages. */
+@layer base {
+    .fi-panel-portal {
+        --topbar-height: 80px;
+        --portal-surface: #fff;
+        --portal-background: #f9fafb;
+        --portal-border: #e4e7ec;
+        --portal-text: #101828;
+        --portal-muted: #667085;
+        --portal-accent: #465fff;
+        --portal-soft: #eef2ff;
+        background: var(--portal-background);
+        color: var(--portal-text);
+        font-family: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+    }
+    .dark .fi-panel-portal {
+        --portal-surface: #1d2939;
+        --portal-background: #101828;
+        --portal-border: #344054;
+        --portal-text: #f2f4f7;
+        --portal-muted: #b3bdcc;
+        --portal-accent: #9ba8ff;
+        --portal-soft: #242f4c;
+    }
+}
+
+.fi-panel-portal .fi-sidebar { background: var(--portal-surface); border-inline-end: 1px solid var(--portal-border); }
+.fi-panel-portal .fi-sidebar-header, .fi-panel-portal .fi-topbar { background: var(--portal-surface); box-shadow: none; border-bottom: 1px solid var(--portal-border); min-height: 80px; }
+.fi-panel-portal .fi-sidebar-header { padding-inline: 22px; }
+.fi-panel-portal .fi-sidebar-nav { padding-inline: 18px; padding-top: 22px; }
+.fi-panel-portal .fi-sidebar-group-label { color: var(--portal-muted); font-size: 12px; letter-spacing: .06em; font-weight: 600; }
+.fi-panel-portal .fi-sidebar-item-btn { border-radius: 8px; padding: 12px; }
+.fi-panel-portal .fi-sidebar-item-label { font-size: 14px; font-weight: 500; }
+.fi-panel-portal .fi-sidebar-item.fi-active > .fi-sidebar-item-btn { background: var(--portal-soft); }
+.fi-panel-portal .fi-sidebar-item.fi-active .fi-sidebar-item-label, .fi-panel-portal .fi-sidebar-item.fi-active .fi-icon { color: var(--portal-accent); }
+.fi-panel-portal .fi-main { padding-top: 30px; padding-bottom: 32px; }
+.fi-panel-portal .fi-header-heading { font-size: 30px; letter-spacing: -.035em; font-weight: 650; }
+.fi-panel-portal .fi-header-subheading { color: var(--portal-muted); font-size: 15px; }
+.fi-panel-portal .fi-breadcrumbs { font-size: 14px; }
+.fi-panel-portal .fi-section, .fi-panel-portal .fi-ta-ctn, .fi-panel-portal .fi-wi-stats-overview-stat {
+    background: var(--portal-surface); border: 1px solid var(--portal-border); border-radius: 16px; box-shadow: none; --tw-ring-shadow: 0 0 #0000;
+}
+.fi-panel-portal .fi-section-header { padding: 22px 24px; }
+.fi-panel-portal .fi-section-header-heading { font-size: 17px; font-weight: 600; }
+.fi-panel-portal .fi-section-content { padding: 24px; }
+.fi-panel-portal .fi-ta-header, .fi-panel-portal .fi-ta-header-toolbar { padding: 20px 24px; }
+.fi-panel-portal .fi-ta-header-cell { background: var(--portal-background); padding-block: 15px; }
+.fi-panel-portal .fi-ta-header-cell-label { font-size: 12px; font-weight: 600; color: var(--portal-muted); }
+.fi-panel-portal .fi-ta-cell { border-color: var(--portal-border); }
+.fi-panel-portal .fi-ta-text { padding-block: 16px; }
+.fi-panel-portal .fi-ta-row:hover { background: var(--portal-background); }
+.fi-panel-portal .fi-ta-content { border-color: var(--portal-border); }
+.fi-panel-portal .fi-pagination { padding: 18px 24px; }
+.fi-panel-portal .fi-input-wrp { border-radius: 8px; background: var(--portal-surface); }
+.fi-panel-portal .fi-input, .fi-panel-portal .fi-select-input { min-height: 44px; font-size: 14px; }
+.fi-panel-portal .fi-fo-field-label-content { font-size: 14px; font-weight: 500; }
+.fi-panel-portal .fi-fo-field-wrp-helper-text { color: var(--portal-muted); }
+.fi-panel-portal .fi-btn { border-radius: 8px; min-height: 40px; font-size: 14px; font-weight: 600; box-shadow: none; }
+.fi-panel-portal .fi-badge { border-radius: 20px; padding-inline: 10px; }
+.fi-panel-portal .fi-tabs { border-radius: 10px; box-shadow: none; }
+.fi-panel-portal .fi-tabs-item { border-radius: 7px; }
+.fi-panel-portal .fi-modal-window { border-radius: 16px; border: 1px solid var(--portal-border); background: var(--portal-surface); }
+.fi-panel-portal .fi-dropdown-panel { border-radius: 12px; background: var(--portal-surface); }
+.fi-panel-portal .fi-ta-empty-state { padding-block: 60px; }
+.fi-panel-portal [x-ref='canvas'] { border: 2px solid var(--portal-border); border-radius: 8px; background-image: linear-gradient(to bottom, transparent calc(100% - 40px), #9ca3af calc(100% - 40px), #9ca3af calc(100% - 39px), transparent calc(100% - 39px)); }
+.portal-brand-logo { display: block; height: 7rem; width: 7rem; object-fit: contain; }
+.fi-panel-portal .fi-sidebar-header { min-height: 7rem; justify-content: center; }
+.portal-workspace-home { font-size: 14px; color: var(--portal-muted); white-space: nowrap; }
+.portal-workspace-home span { margin-inline: 12px; color: #98a2b3; }
+.portal-workspace-footer { padding: 12px 32px 28px; display: flex; justify-content: space-between; gap: 16px; color: var(--portal-muted); font-size: 12px; }
+.portal-workspace-footer a { color: var(--portal-accent); }
+@media(max-width: 640px) {
+    .portal-workspace-home { display: none; }
+    .fi-panel-portal .fi-main { padding-top: 20px; }
+    .fi-panel-portal .fi-header-heading { font-size: 26px; }
+    .fi-panel-portal .fi-section-content { padding: 18px; }
+    .portal-workspace-footer { padding-inline: 16px; flex-wrap: wrap; }
+}

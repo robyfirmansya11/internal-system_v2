@@ -1,0 +1,1 @@
+<footer class="portal-workspace-footer"><span>{{ __('Internal System · Portal karyawan') }}</span><a href="{{ route('filament.admin.pages.dashboard') }}">{{ __('Buka tampilan Filament') }}</a></footer>
